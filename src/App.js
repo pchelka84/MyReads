@@ -6,7 +6,11 @@ import SearchPage from "./SearchPage";
 
 class BooksApp extends React.Component {
   render() {
-    return <div className="app" />;
+    return (
+      <div className="app">
+        <MainPage />
+      </div>
+    );
   }
 }
 
