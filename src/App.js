@@ -5,6 +5,10 @@ import MainPage from "./MainPage";
 import SearchPage from "./SearchPage";
 
 class BooksApp extends React.Component {
+  state = {
+    books: []
+  };
+
   render() {
     return (
       <div className="app">
