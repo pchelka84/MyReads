@@ -12,17 +12,19 @@ class MainPage extends Component {
           <div>
             <BookShelf
               shelfName="Currently Reading"
-              books={this.props.filter(
+              books={this.props.books.filter(
                 book => book.shelf === "currentlyReading"
               )}
             />
             <BookShelf
               shelfName="Want to Read"
-              books={this.props.filter(book => book.shelf === "wantToRead")}
+              books={this.props.books.filter(
+                book => book.shelf === "wantToRead"
+              )}
             />
             <BookShelf
               shelfName="Read"
-              books={this.props.filter(book => book.shelf === "read")}
+              books={this.props.books.filter(book => book.shelf === "read")}
             />
           </div>
         </div>
