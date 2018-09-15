@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Book from "./Book";
+import * as BooksAPI from "./BooksAPI";
 
 class SearchPage extends Component {
   state = {
@@ -11,6 +12,18 @@ class SearchPage extends Component {
     this.setState({
       query: query
     });
+
+    this.updateSearchedBooks(query);
+  };
+
+  updateSearchedBooks = query => {
+    if (query) {
+      BooksAPI.search(query).then(searchedBooks => {
+        this.setState({ searchedBooks: searchedBooks });
+      });
+    } else {
+      this.setState({ searchedBooks: [] });
+    }
   };
 
   render() {
@@ -33,7 +46,13 @@ class SearchPage extends Component {
           </div>
         </div>
         <div className="search-books-results">
-          <ol className="books-grid" />
+          <ol className="books-grid">
+            {this.state.searchedBooks.map(searchedBook => (
+              <li key={searchedBook.id}>
+                <Book book={searchedBook} />
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     );
