@@ -10,9 +10,9 @@ class MainPage extends Component {
         </div>
         <div className="list-books-content">
           <div>
-            <BookShelf />
-            <BookShelf />
-            <BookShelf />
+            <BookShelf shelfName="Currently Reading" />
+            <BookShelf shelfName="Want to Read" />
+            <BookShelf shelfName="Read" />
           </div>
         </div>
         <div className="open-search">
