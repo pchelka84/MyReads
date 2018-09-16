@@ -10,6 +10,8 @@ class MainPage extends Component {
   };
 
   render() {
+    const { books, moveShelf } = this.props;
+
     return (
       <div className="list-books">
         <div className="list-books-title">
@@ -19,24 +21,20 @@ class MainPage extends Component {
           <div>
             <BookShelf
               shelfName="Currently Reading"
-              books={this.props.books.filter(
-                book => book.shelf === "currentlyReading"
-              )}
-              moveShelf={this.props.moveShelf}
+              books={books.filter(book => book.shelf === "currentlyReading")}
+              moveShelf={moveShelf}
               currentShelf="currentlyReading"
             />
             <BookShelf
               shelfName="Want to Read"
-              books={this.props.books.filter(
-                book => book.shelf === "wantToRead"
-              )}
-              moveShelf={this.props.moveShelf}
+              books={books.filter(book => book.shelf === "wantToRead")}
+              moveShelf={moveShelf}
               currentShelf="wantToRead"
             />
             <BookShelf
               shelfName="Read"
-              books={this.props.books.filter(book => book.shelf === "read")}
-              moveShelf={this.props.moveShelf}
+              books={books.filter(book => book.shelf === "read")}
+              moveShelf={moveShelf}
               currentShelf="read"
             />
           </div>
