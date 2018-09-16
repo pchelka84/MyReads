@@ -5,6 +5,8 @@ function Book(props) {
     ? props.book.imageLinks.thumbnail
     : "";
 
+  const { book } = props;
+
   return (
     <div className="book">
       <div className="book-top">
@@ -18,7 +20,7 @@ function Book(props) {
         />
         <div className="book-shelf-changer">
           <select
-            onChange={event => props.moveShelf(props.book, event.target.value)}
+            onChange={event => props.moveShelf(book, event.target.value)}
             value={props.currentShelf}
           >
             <option value="move" disabled>
@@ -31,8 +33,8 @@ function Book(props) {
           </select>
         </div>
       </div>
-      <div className="book-title">{props.book.title}</div>
-      <div className="book-authors">{props.book.authors}</div>
+      <div className="book-title">{book.title}</div>
+      <div className="book-authors">{book.authors}</div>
     </div>
   );
 }
