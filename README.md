@@ -62,4 +62,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Credits
 
-- Special Thanks to Maeva NAP for a [great YouTube tutuorial](https://www.youtube.com/watch?v=i6L2jLHV9j8&index=3&list=PLhYFhnOrUt-UprG5X58iKZXcJjBfH7-71)
+- Special Thanks to Maeva NAP for a [great YouTube tutorial](https://www.youtube.com/watch?v=i6L2jLHV9j8&index=3&list=PLhYFhnOrUt-UprG5X58iKZXcJjBfH7-71)
