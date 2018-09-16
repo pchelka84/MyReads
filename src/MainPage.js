@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import BookShelf from "./BookShelf";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 class MainPage extends Component {
+  static PropTypes = {
+    books: PropTypes.array.isRequired,
+    moveShelf: PropTypes.func.isRequired
+  };
+
   render() {
     return (
       <div className="list-books">
