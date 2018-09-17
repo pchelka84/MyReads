@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class MainPage extends Component {
-  static PropTypes = {
+  static propTypes = {
     books: PropTypes.array.isRequired,
     moveShelf: PropTypes.func.isRequired
   };
